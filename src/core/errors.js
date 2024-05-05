@@ -47,6 +47,11 @@ const errorTypes = {
     status: 418,
     code: 'ALERT_ERROR',
   }, // hacker tryout case errors
+  TOO_MANY: {
+    description: 'Too many failed login attempts.',
+    status: 403,
+    code: 'TOO_MANY_ATTEMP_ERROR',
+  },
   FORBIDDEN: {
     description: 'Access forbidden',
     status: 403,

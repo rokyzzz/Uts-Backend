@@ -5,7 +5,17 @@ const { User } = require('../../../models');
  * @returns {Promise}
  */
 async function getUsers() {
-  return User.find({});
+  // return User.find({});
+  return User.aggregate([
+    {
+      $lookup: {
+        from: 'investment_deposits',
+        localField: 'email',
+        foreignField: 'email',
+        as: 'investment_deposits',
+      },
+    },
+  ]);
 }
 
 /**
@@ -24,11 +34,12 @@ async function getUser(id) {
  * @param {string} password - Hashed password
  * @returns {Promise}
  */
-async function createUser(name, email, password) {
+async function createUser(name, email, password, role = 'admin') {
   return User.create({
     name,
     email,
     password,
+    role,
   });
 }
 

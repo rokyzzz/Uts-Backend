@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "66355ce5d15d896734e631e7"
+  },
+  "email": "rina.wijaya@example.com",
+  "investment_code": "SD",
+  "amount": 150000,
+  "__v": 0
+}]

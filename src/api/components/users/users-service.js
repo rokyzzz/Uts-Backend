@@ -1,24 +1,66 @@
 const usersRepository = require('./users-repository');
 const { hashPassword, passwordMatched } = require('../../../utils/password');
+const { default: pino } = require('pino');
 
 /**
  * Get list of users
  * @returns {Array}
  */
-async function getUsers() {
-  const users = await usersRepository.getUsers();
+async function getUsers(pageNumber = 1, pageSize = 10, search = '', sort = '') {
+  let users = await usersRepository.getUsers();
 
-  const results = [];
-  for (let i = 0; i < users.length; i += 1) {
-    const user = users[i];
-    results.push({
-      id: user.id,
-      name: user.name,
-      email: user.email,
+  // Apply search filter
+  if (search) {
+    const [searchField, searchValue] = search.split(':');
+    users = users.filter((user) => user[searchField].includes(searchValue));
+  }
+
+  // Apply sorting
+  if (sort) {
+    const [sortField, sortOrder] = sort.split(':');
+    users.sort((a, b) => {
+      if (sortOrder === 'asc') {
+        return a[sortField].localeCompare(b[sortField]);
+      } else if (sortOrder === 'desc') {
+        return b[sortField].localeCompare(a[sortField]);
+      }
+      return 0;
     });
   }
 
-  return results;
+  const totalCount = users.length;
+  const totalPages = Math.ceil(totalCount / parseFloat(pageSize));
+  const startIndex = (parseFloat(pageNumber) - 1) * parseFloat(pageSize);
+  const endIndex = parseFloat(startIndex) + parseFloat(pageSize);
+  const data = users.slice(startIndex, endIndex);
+  console.log(data);
+  return {
+    page_number: pageNumber,
+    page_size: pageSize,
+    count: data.length,
+    total_pages: totalPages,
+    has_previous_page: pageNumber > 1,
+    has_next_page: pageNumber < totalPages,
+
+    data: data.map((user) => {
+      let data = {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+      };
+
+      if (user.role === 'bank-customers') {
+        data.total_investment = user.investment_deposits.reduce(
+          (sum, deposit) => sum + deposit.amount,
+          0
+        );
+        data.investment_deposits = user.investment_deposits;
+      }
+
+      return data;
+    }),
+  };
 }
 
 /**
@@ -48,12 +90,12 @@ async function getUser(id) {
  * @param {string} password - Password
  * @returns {boolean}
  */
-async function createUser(name, email, password) {
+async function createUser(name, email, password, role = 'admin') {
   // Hash password
   const hashedPassword = await hashPassword(password);
 
   try {
-    await usersRepository.createUser(name, email, hashedPassword);
+    await usersRepository.createUser(name, email, hashedPassword, role);
   } catch (err) {
     return null;
   }

@@ -1,5 +1,6 @@
 const usersService = require('./users-service');
 const { errorResponder, errorTypes } = require('../../../core/errors');
+const { default: pino } = require('pino');
 
 /**
  * Handle get list of users request
@@ -10,7 +11,13 @@ const { errorResponder, errorTypes } = require('../../../core/errors');
  */
 async function getUsers(request, response, next) {
   try {
-    const users = await usersService.getUsers();
+    pino().info(request.query.search);
+    const users = await usersService.getUsers(
+      request.query.page_number,
+      request.query.page_size,
+      request.query.search,
+      request.query.sort
+    );
     return response.status(200).json(users);
   } catch (error) {
     return next(error);

@@ -1,0 +1,247 @@
+[{
+  "_id": {
+    "$oid": "66354a12c0d56343eb634c22"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "gagal login. Attemp = 1",
+  "successful": false,
+  "attemptTo": 1,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:33:22.449Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354a435ea26eecefc9f674"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "gagal login. Attemp = 2",
+  "successful": false,
+  "attemptTo": 2,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:34:11.565Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354a72be7d3834f864843e"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "gagal login. Attemp = 3",
+  "successful": false,
+  "attemptTo": 3,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:34:58.359Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354a81be7d3834f8648445"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "gagal login. Attemp = 4",
+  "successful": false,
+  "attemptTo": 4,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:35:13.231Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354a85be7d3834f864844c"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "gagal login. Attemp = 5",
+  "successful": false,
+  "attemptTo": 5,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:35:17.647Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354a86be7d3834f8648450"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "Too many login attempts",
+  "successful": false,
+  "attemptTo": 6,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:35:18.929Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354a9627a7231a5d20c750"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "Too many login attempts",
+  "successful": false,
+  "attemptTo": 6,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:35:34.634Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354a9727a7231a5d20c754"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "Too many login attempts",
+  "successful": false,
+  "attemptTo": 6,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:35:35.493Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354a9927a7231a5d20c758"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "Too many login attempts",
+  "successful": false,
+  "attemptTo": 6,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:35:37.433Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354b34d061347cfca8fb69"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "mencoba login, namun mendapat error 403 karena telah melebihi limit attempt.",
+  "successful": false,
+  "attemptTo": 6,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:38:12.670Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354b59d061347cfca8fb6d"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "mencoba login, namun mendapat error 403 karena telah melebihi limit attempt.",
+  "successful": false,
+  "attemptTo": 6,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:38:49.455Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354b6c23bdce3cfd381145"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "bisa mencoba login kembali karena sudah lebih dari 30 menit sejak pengenaan limit. Attempt di-reset kembali ke 0.",
+  "successful": false,
+  "attemptTo": 0,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:39:08.520Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354b6f23bdce3cfd38114b"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "gagal login. Attemp = 6",
+  "successful": false,
+  "attemptTo": 6,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:39:11.771Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354b8f23bdce3cfd381152"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "gagal login. Attemp = 2",
+  "successful": false,
+  "attemptTo": 2,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:39:43.259Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354b9323bdce3cfd381159"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "gagal login. Attemp = 3",
+  "successful": false,
+  "attemptTo": 3,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:39:47.393Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354b9723bdce3cfd381160"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "gagal login. Attemp = 4",
+  "successful": false,
+  "attemptTo": 4,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:39:51.549Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354b9b23bdce3cfd381167"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "gagal login. Attemp = 5",
+  "successful": false,
+  "attemptTo": 5,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:39:55.497Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354b9c23bdce3cfd38116b"
+  },
+  "email": "rina.wijaya@example.com",
+  "message": "mencoba login, namun mendapat error 403 karena telah melebihi limit attempt.",
+  "successful": false,
+  "attemptTo": 6,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:39:56.277Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663552382bfd8caa00eb3a7d"
+  },
+  "email": "test@gmail.com",
+  "message": "Berhasil login",
+  "successful": true,
+  "attemptTo": 0,
+  "attemptedAt": {
+    "$date": "2024-05-03T21:08:08.791Z"
+  },
+  "__v": 0
+}]

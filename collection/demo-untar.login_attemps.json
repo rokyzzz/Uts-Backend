@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "66354b6f23bdce3cfd381149"
+  },
+  "email": "rina.wijaya@example.com",
+  "successful": false,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:39:11.768Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354b8f23bdce3cfd381150"
+  },
+  "email": "rina.wijaya@example.com",
+  "successful": false,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:39:43.256Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354b9323bdce3cfd381157"
+  },
+  "email": "rina.wijaya@example.com",
+  "successful": false,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:39:47.390Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354b9723bdce3cfd38115e"
+  },
+  "email": "rina.wijaya@example.com",
+  "successful": false,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:39:51.547Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66354b9b23bdce3cfd381165"
+  },
+  "email": "rina.wijaya@example.com",
+  "successful": false,
+  "attemptedAt": {
+    "$date": "2024-05-03T20:39:55.496Z"
+  },
+  "__v": 0
+}] 
